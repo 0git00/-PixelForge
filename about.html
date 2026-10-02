@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About – PixelForge</title>
+<meta name="description" content="Simple photo editing in your browser. PixelForge is a browser-based photo editor with local image processing whenever possible.">
+<style>
+:root{--bg:#0f1115;--p:#171a21;--p2:#222733;--t:#e8eaed;--m:#a3a9b5;--a:#7c5cff;--a2:#4cc2ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% 0%,#1b2030 0,#0f1115 42%,#0b0d11 100%);color:var(--t);font:15px/1.75 system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh}
+a{color:#8ecfff;text-decoration:none}a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#1d212b,#171a21);border-bottom:1px solid #2a2f3b;backdrop-filter:blur(12px)}
+.nav{max-width:1100px;margin:auto;padding:15px 22px;display:flex;align-items:center;gap:10px}
+.logo{font-weight:800;font-size:20px;letter-spacing:.4px;background:linear-gradient(90deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:auto}
+.nav a{padding:8px 12px;border-radius:8px;color:var(--t);font-size:14px}
+.nav a:hover{background:var(--p2);text-decoration:none}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--a),#5a7dff);color:#fff;padding:10px 16px;border-radius:9px;box-shadow:0 4px 18px #7c5cff33}
+main{max-width:900px;margin:0 auto;padding:70px 22px 80px}
+.hero{text-align:center;margin-bottom:42px}
+.badge{display:inline-block;padding:5px 11px;border:1px solid #394052;border-radius:999px;background:#151923;color:#9edbff;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:18px 0 12px}
+.hero p{max-width:680px;margin:auto;color:var(--m);font-size:17px}
+.card{background:linear-gradient(180deg,#171a21dd,#12151bdd);border:1px solid #2d3442;border-radius:18px;padding:28px;margin:18px 0;box-shadow:0 12px 45px #0004}
+h2{font-size:22px;margin:0 0 10px;color:#fff}
+h3{font-size:16px;margin:22px 0 7px}
+p{margin:9px 0;color:#c5cad3}
+ul{padding-left:22px;color:#c5cad3}
+li{margin:6px 0}
+.note{border-left:3px solid var(--a2);padding:12px 16px;background:#121a25;border-radius:0 10px 10px 0;color:#cbd4df}
+.meta{color:var(--m);font-size:13px}
+footer{border-top:1px solid #262b36;background:#12151b;padding:28px 22px;color:var(--m)}
+.footer-inner{max-width:1100px;margin:auto;display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:700px){.nav{padding:12px 14px;flex-wrap:wrap}.nav a{font-size:12px;padding:7px 8px}main{padding:45px 14px 60px}.card{padding:21px} .logo{width:100%;margin-right:0}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="logo" href="index.html">◈ PixelForge</a><a href="index.html">Editor</a><a href="about.html" class="btn">About</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav></header>
+<main>
+<section class="hero">
+<span class="badge">PixelForge</span>
+<h1>Simple photo editing in your browser</h1>
+<p>Learn what PixelForge does, how the editor is structured, and what you can do with it.</p>
+</section>
+
+<section class="card">
+<h2>What is PixelForge?</h2>
+<p>PixelForge is a browser-based photo editor designed for practical image editing without requiring a separate desktop editor. The current editor supports JPG, PNG and WebP images and provides tools for editing, adjustments, layers, background changes and export.</p>
+<p>The editor interface is built around a focused workspace: open an image, edit it on the canvas, adjust it, work with layers, and export the result.</p>
+</section>
+<section class="card">
+<h2>Key features</h2>
+<ul>
+<li>Crop, resize, rotate and flip images.</li>
+<li>Brightness, contrast, saturation, exposure, temperature and other adjustments.</li>
+<li>Preset filters including Vintage, Black &amp; White, Warm, Cool and Cinematic.</li>
+<li>Object removal and background-removal tools.</li>
+<li>Text, shapes, drawing and added image layers.</li>
+<li>Undo and redo history for editing actions.</li>
+<li>PNG, JPG and WebP export options with configurable quality.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Privacy-focused workflow</h2>
+<p>PixelForge's editor states that images are processed locally in the browser whenever possible. The interface also states that no API key or account is required for the editor.</p>
+<div class="note">Local browser processing can depend on the feature, browser and device. For details about information handling, see the Privacy Policy.</div>
+</section>
+<section class="card">
+<h2>Our approach</h2>
+<p>PixelForge is intended to keep photo editing simple, accessible and focused on the actual image. We aim to provide a clean interface with useful editing controls while minimizing unnecessary setup.</p>
+</section>
+
+</main>
+<footer><div class="footer-inner">
+<div>© 2026 PixelForge. Photo editing in your browser.</div>
+<div class="footer-links"><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div>
+</div></footer>
+</body>
+</html>
