@@ -1,4 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PixelForge – Photo Editor</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PixelForge – Online Photo Editor in Your Browser</title>
+<meta name="description" content="Edit photos in your browser: crop, resize, remove backgrounds and objects, add text, apply filters and export PNG, JPG or WebP. No account or API key needed.">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f1115">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PixelForge"><meta property="og:title" content="PixelForge – Online Photo Editor in Your Browser"><meta property="og:description" content="Edit photos in your browser: crop, resize, remove backgrounds and objects, add text, apply filters and export PNG, JPG or WebP. No account or API key needed."><meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="PixelForge – Online Photo Editor in Your Browser"><meta name="twitter:description" content="Edit photos in your browser: crop, resize, remove backgrounds and objects, add text, apply filters and export PNG, JPG or WebP. No account or API key needed.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://YOUR-DOMAIN.com/#app", "name": "PixelForge", "url": "https://YOUR-DOMAIN.com/", "description": "Edit photos in your browser: crop, resize, remove backgrounds and objects, add text, apply filters and export PNG, JPG or WebP. No account or API key needed.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any (modern web browser)", "browserRequirements": "Requires JavaScript", "featureList": ["Crop, resize, rotate and flip", "Object removal and healing", "Background removal and replacement", "Text, shapes, drawing and layers", "Adjustments and filters", "PNG, JPG and WebP export"]}, {"@type": "WebSite", "@id": "https://YOUR-DOMAIN.com/#site", "name": "PixelForge", "url": "https://YOUR-DOMAIN.com/"}]}</script>
 <style>
 :root{--bg:#0f1115;--p:#171a21;--p2:#222733;--t:#e8eaed;--m:#a3a9b5;--a:#7c5cff;--a2:#4cc2ff}
 *{box-sizing:border-box}[hidden]{display:none!important}
@@ -105,18 +113,18 @@ input[type=range]{transition:filter .2s}input[type=range]:hover{filter:drop-shad
 @media(max-width:800px){#tools>*{--sy:12px;--sx:0px}#side{animation-name:riseUp}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
 .pl{display:flex;gap:14px;flex-wrap:wrap}.pl a{color:#8ecfff;text-decoration:none}.pl a:hover{text-decoration:underline}
-</style></head><body>
+#empty h1{font-size:22px;margin:0 0 4px;line-height:1.2}#empty h2{font-size:17px;margin:14px 0 6px}</style></head><body>
 <header><b class="logo">◈ PixelForge</b>
 <button data-a="open" title="Open or replace image">📂 Open/Replace</button><button data-a="remove" title="Remove image / start new">🗑 New</button>
 <span class="sep"></span><button id="undo" data-a="undo" title="Undo (Ctrl+Z)">↶ Undo</button><button id="redo" data-a="redo" title="Redo (Ctrl+Y)">↷ Redo</button>
 <span class="sep"></span><button data-a="reset" title="Clear adjustments, layers and background">Reset</button><button data-a="orig" title="Restore the original pixels">Recover Original</button>
 <span style="flex:1"></span><button class="pri" data-a="tab:ex" title="Export (Ctrl+S)">⬇ Export</button></header>
 <main><nav id="tools" aria-label="Tools"></nav>
-<section id="stage"><div id="empty"><div class="vf" aria-hidden="true"><i></i></div><h2>Drop an image here</h2><p>JPG, PNG or WebP — drag &amp; drop, paste (Ctrl+V) or browse.</p><button class="pri" data-a="open">Choose image</button><p class="hint">🔒 Your images are processed locally in your browser whenever possible. No API key or account is required.</p></div>
+<section id="stage"><div id="empty"><div class="vf" aria-hidden="true"><i></i></div><h1>Online photo editor in your browser</h1><h2>Drop an image here</h2><p>JPG, PNG or WebP — drag &amp; drop, paste (Ctrl+V) or browse.</p><p class="hint">Crop, resize, remove backgrounds and objects, add text, apply filters and export as PNG, JPG or WebP.</p><button class="pri" data-a="open">Choose image</button><p class="hint">🔒 Your images are processed locally in your browser whenever possible. No API key or account is required.</p></div>
 <div id="wrap" hidden><canvas id="cv"></canvas><canvas id="ov" tabindex="0" aria-label="Editing canvas"></canvas></div></section>
 <aside id="side"><div id="tabs"><button data-a="tab:tool" class="on">Tool</button><button data-a="tab:adj">Adjust</button><button data-a="tab:ly">Layers</button><button data-a="tab:ex">Export</button></div>
 <div id="t-tool"></div><div id="t-adj" hidden></div><div id="t-ly" hidden></div><div id="t-ex" hidden></div></aside></main>
-<footer id="bar"><button data-a="zout" title="Zoom out">−</button><input id="zl" type="number" min="5" max="800" aria-label="Zoom percent">%<button data-a="zin" title="Zoom in">+</button><button data-a="fit">Fit</button><button data-a="z100">100%</button><button data-a="center">Center</button><span id="st"></span><span>🔒 Processed locally in your browser. No API key or account.</span><span style="flex:1"></span><nav class="pl" aria-label="Site pages"><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav></footer>
+<footer id="bar"><button data-a="zout" title="Zoom out">−</button><input id="zl" type="number" min="5" max="800" aria-label="Zoom percent">%<button data-a="zin" title="Zoom in">+</button><button data-a="fit">Fit</button><button data-a="z100">100%</button><button data-a="center">Center</button><span id="st"></span><span>🔒 Processed locally in your browser. No API key or account.</span><span style="flex:1"></span><nav class="pl" aria-label="Site pages"><a href="about.html">About</a><a href="features.html">Features</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav></footer>
 <div id="toast" role="alert" hidden></div><div id="busy" hidden><div class="sp"></div><div id="bm">Working…</div></div>
 <input type="file" id="fi" accept="image/png,image/jpeg,image/webp" hidden><input type="file" id="fa" accept="image/png,image/jpeg,image/webp" hidden><input type="file" id="fb" accept="image/png,image/jpeg,image/webp" hidden>
 <script>
